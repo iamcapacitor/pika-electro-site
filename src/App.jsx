@@ -1,24 +1,45 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const image = ["lightmodeimage.svg","darkmodeimage.svg"];
-  const [count, setCount] = useState(0)
+  console.log("App rerendering")
   const [modeimage, setModeimage] = useState("lightmodeimage.svg")
+  const [usertheme, setUsertheme] = useState("dark");
+
+  const changestates = () => {
+    if(usertheme === "light"){
+      setModeimage("darkmodeimage.svg");
+      setUsertheme("dark")
+      document.body.dataset.theme = "dark"
+    }else{
+      setModeimage("lightmodeimage.svg");
+      setUsertheme("light")
+      document.body.dataset.theme = "light"
+    }
+  }
+
+  // check user device theme and keep that theme initially---------------------------------------
+  useEffect(() => {
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      setUsertheme("dark")
+      document.body.dataset.theme = "dark"
+    } else {
+      setUsertheme("light")
+      document.body.dataset.theme = "light"
+    }
+  }, [])
 
   return (
     <>
-      <div className="card">
-        <button onClick={() => modeimage == "lightmodeimage.svg"?setModeimage("darkmodeimage.svg"):setModeimage("lightmodeimage.svg")}>
+      <div className="card bg-[var(--bg2)]">
+        <button onClick={changestates}>
           <div>
-          <img src={`/${modeimage}`} className="logo react" alt="React logo" />
+            <img src={`/${modeimage}`} className="logo react" alt="React logo" />
           </div>
         </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+        <p>{modeimage} , {usertheme}</p>
       </div>
     </>
   )
