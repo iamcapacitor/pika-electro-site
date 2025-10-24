@@ -11,10 +11,12 @@
   --bodybg: rgb(233, 233, 233);
   --bg2: rgb(172, 252, 91);
   --sectionbg:white;
-  --maintagbg:white;
+  --maintagbg:rgb(255, 255, 255);
+  --footerbg:rgb(241, 241, 241);
   --btnbg:#c3c3c3;
   --text: black;
   --text2:rgb(133, 128, 128);
+  --text3:rgb(124, 124, 124);
   --card-bg: #fef3c7; /* amber-100 */
 }
 
@@ -23,9 +25,11 @@
   --bg2: rgb(156, 156, 156);
   --sectionbg:rgb(25, 25, 40);
   --maintagbg:rgb(18, 28, 49);
+  --footerbg:rgb(19, 28, 46);
   --btnbg:#1a1a1a;
   --text: white;
   --text2:rgb(131, 197, 188);
+  --text3:rgb(224, 224, 224);
   --card-bg: #1e293b; /* slate-800 */
 }
 
@@ -50,7 +54,7 @@ h1 {
   line-height: 1.1;
 }
 
-button {
+button.normalbtn {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6rem 1.2rem;
@@ -61,10 +65,10 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
-button:hover {
+button.normalbtn:hover {
   border-color: #646cff;
 }
-button:focus,
+button.normalbtn:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
