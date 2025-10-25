@@ -28,3 +28,13 @@ export default defineConfig({
 @import "tailwindcss";
 ```
 - done
+## 3. for multipages in react
+- install react-route-dom
+```js
+npm install react-router-dom
+```
+- add this line in app.jsx
+```js
+import { createBrowserRouter } from 'react-router-dom'
+```
+- check app.jsx to check other setup of this
