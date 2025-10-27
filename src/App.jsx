@@ -37,32 +37,9 @@ function App() {
     },
   ]
 
-  const changestates = () => {
-    if (usertheme === "light") {
-      setModeimage("darkmodeimage.svg");
-      setUsertheme("dark")
-      document.body.dataset.theme = "dark"
-    } else {
-      setModeimage("lightmodeimage.svg");
-      setUsertheme("light")
-      document.body.dataset.theme = "light"
-    }
-  }
-
-  // check user device theme and keep that theme initially---------------------------------------
-  useEffect(() => {
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      setUsertheme("dark")
-      document.body.dataset.theme = "dark"
-    } else {
-      setUsertheme("light")
-      document.body.dataset.theme = "light"
-    }
-  }, [])
-
   return (
     <>
-      <nav className="card2 bg-[var(--bg2)] p-2 px-3 rounded-md flex flex-row gap-1.5">
+      {/* <nav className="card2 bg-[var(--bg2)] p-2 px-3 rounded-md flex flex-row gap-1.5">
         <button className='normalbtn' onClick={changestates} >
           <div>
             <img src={`/${modeimage}`} className="logo react" alt="React logo" />
@@ -72,7 +49,8 @@ function App() {
           <p>Theme toggle btn</p>
           <p>{modeimage} , {usertheme}</p>
         </div>
-      </nav>
+      </nav> */}
+
       <main className='bg-[var(--maintagbg)] py-9  flex flex-col gap-6'>
         <section className="uppersection flex flex-col text-md sm:text-xl gap-3 p-3 py-4 bg-[var(--sectionbg)]">
           <p className='text-indigo-400 font-bold'>Lorem, ipsum dolor.</p>

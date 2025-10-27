@@ -4,21 +4,22 @@ import './index.css'
 import App from './App.jsx'
 import Homepage from './components/Homepage'
 import Design from './components/Design'
+import Navigation from './components/Navigation.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />
+    element: <><Navigation/><App /></>
   },
   {
     path: "/homepage",
-    element: <Homepage />
+    element: <><Navigation/><Homepage /></>
   },
   {
     path: "/designpage",
-    element: <Design />
+    element: <><Navigation/><Design /></>
   },
 ])
 
