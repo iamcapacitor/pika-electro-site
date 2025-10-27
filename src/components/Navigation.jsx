@@ -37,12 +37,12 @@ const Navigation = () => {
                     <img src={`/${modeimage}`} className="logo react" alt="theme change logo" />
                 </div>
             </button>
-            <div>
+            {/* <div>
                 <p>Theme toggle btn</p>
                 <p>{modeimage} , {usertheme}</p>
-            </div>
+            </div> */}
             <div className='flex gap-1 place-items-center'>
-                <NavLink to="/homepage" >homepage</NavLink>
+                <NavLink to="/page2" >page2</NavLink>
                 <NavLink to="/designpage" >designpage</NavLink>
             </div>
         </nav>

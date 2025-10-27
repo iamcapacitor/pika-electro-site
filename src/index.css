@@ -13,6 +13,9 @@
   --sectionbg:white;
   --maintagbg:rgb(255, 255, 255);
   --footerbg:rgb(241, 241, 241);
+  --servicebg:#e2e4e9;
+  --servicetext:#182131;
+  --scolor:#d0d5e2;
   --btnbg:#c3c3c3;
   --text: black;
   --text2:rgb(133, 128, 128);
@@ -25,6 +28,9 @@
   --bg2: rgb(156, 156, 156);
   --sectionbg:rgb(25, 25, 40);
   --maintagbg:rgb(18, 28, 49);
+  --servicebg:#182131;
+  --servicetext:white;
+  --scolor:#232d3d;
   --footerbg:rgb(19, 28, 46);
   --btnbg:#1a1a1a;
   --text: white;

@@ -5,6 +5,7 @@ import App from './App.jsx'
 import Homepage from './components/Homepage'
 import Design from './components/Design'
 import Navigation from './components/Navigation.jsx'
+import Footer from './components/Footer.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 
@@ -14,7 +15,7 @@ const router = createBrowserRouter([
     element: <><Navigation/><App /></>
   },
   {
-    path: "/homepage",
+    path: "/page2",
     element: <><Navigation/><Homepage /></>
   },
   {
@@ -26,5 +27,6 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <RouterProvider router={router} />
+    <Footer></Footer>
   </StrictMode>,
 )
