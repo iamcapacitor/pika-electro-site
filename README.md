@@ -37,4 +37,4 @@ npm install react-router-dom
 ```js
 import { createBrowserRouter } from 'react-router-dom'
 ```
-- check app.jsx to check other setup of this
+- check main.jsx to check other setup of this
