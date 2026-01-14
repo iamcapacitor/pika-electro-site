@@ -37,8 +37,9 @@ npm install react-router-dom
 ```js
 import { createBrowserRouter } from 'react-router-dom'
 ```
-- check app.jsx to check other setup of this
+> check main.jsx to check other setup of this
 ```js
  added this line on 14/01/26
 it tells how to add box to code snippet language 
 ```
+
